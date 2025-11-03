@@ -7,6 +7,7 @@
 </head>
 
 <body>
+  <div class="countdowns">
   <div class="countdown-wrap">
     <h2 class="cd-title">到网站上线还剩</h2>
     <div class="clock" id="cd-launch">
@@ -43,6 +44,7 @@
       <div class="flip down"><div class="digital front number0"></div><div class="digital back number1"></div></div>
       <em class="unit">分</em>
     </div>
+  </div>
   </div>
 </body>
 <script>
@@ -343,7 +345,21 @@ setupCountdown('cd-bf', blackFridayTime)
     vertical-align: top;
 }
 
-.countdown-wrap { margin: 20px auto 40px; text-align: center; }
+.countdowns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 60px;
+}
+
+.countdown-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cd-title { font: 600 20px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial; margin: 10px 0 16px; }
 .clock .unit {
     display: inline-block;
